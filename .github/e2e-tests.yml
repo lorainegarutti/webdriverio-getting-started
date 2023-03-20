@@ -1,0 +1,27 @@
+name: End-to-end
+
+on:
+  pull_request:
+
+jobs:
+  e2e_tests:
+    name: End-to-end tests run
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use specific node version
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install
+        shell: bash
+
+      - name: Run end-to-end tests
+        run: yarn run test:e2e
+
+      - name: Generate end-to-end tests report
+        run: yarn run test:generate:report

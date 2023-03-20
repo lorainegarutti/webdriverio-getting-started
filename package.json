@@ -13,6 +13,6 @@
   },
   "scripts": {
     "test:e2e": "wdio run ./wdio.conf.js --spec ./test/specs/*.e2e.js",
-    "test:generate:report": "marge ./test/results/wdio-ma-merged.json --reportTitle 'End-to-end tests report' --reportDir ./test/results --reportFilename 'e2e-report'"
+    "test:generate:report": "marge ./test/results/results-0-0.json --reportTitle 'End-to-end tests report' --reportDir ./test/results --reportFilename 'e2e-report'"
   }
 }
