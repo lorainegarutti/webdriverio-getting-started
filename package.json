@@ -3,7 +3,6 @@
   "type": "module",
   "devDependencies": {
     "@wdio/cli": "^8.5.9",
-    "@wdio/dot-reporter": "^8.4.0",
     "@wdio/local-runner": "^8.5.9",
     "@wdio/mocha-framework": "^8.5.6",
     "@wdio/spec-reporter": "^8.4.0",

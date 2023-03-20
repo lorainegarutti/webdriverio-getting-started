@@ -1,10 +1,6 @@
 # Getting started
 
-Project to start studies about Webdriver.io implementation for API and end-to-end tests.
-
-- Web based project
-- Master branch is using webdriver.io by itself
-- `selenium-standalone` branch is using webdriver.io with selenium
+Project to start studies about Webdriver.io implementation for end-to-end tests.
 
 ## Required local dependencies
 
@@ -18,7 +14,7 @@ Project to start studies about Webdriver.io implementation for API and end-to-en
 - wdio-mochawesome-reporter
 - mochawesome-report-generator
 - @wdio/mocha-framework
-- @wdio/dot-reporter
+- @wdio/spec-reporter
 - chromedriver
 
 ### Running all tests

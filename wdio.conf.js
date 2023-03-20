@@ -19,17 +19,15 @@ export const config = {
     },
     acceptInsecureCerts: true
   }],
-  // Level of logging verbosity: trace | debug | info | warn | error | silent
-  logLevel: 'info',
+  logLevel: 'error',
   bail: 0,
-  // baseUrl: '',
+  baseUrl: 'https://front.serverest.dev',
   waitforTimeout: 10000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
   services: ['chromedriver'],
   framework: 'mocha',
   reporters: [
-    'dot',
     ['spec', {
       addConsoleLogs: true,
       showPreface: false,
