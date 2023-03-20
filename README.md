@@ -1,6 +1,6 @@
 # Getting started
 
-Project to start studies about Webdriver.io implementation for end-to-end tests.
+Project to start studies about Webdriver.io implementation for end-to-end tests, using PageObjects concept.
 
 ## Required local dependencies
 
