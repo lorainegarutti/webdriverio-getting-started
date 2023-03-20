@@ -1,14 +1,20 @@
-describe('My Login application', () => {
-  it('should login with valid credentials', async () => {
-    await browser.url(`https://the-internet.herokuapp.com/login`)
+import LoginPage from '../pages/login.page.js'
 
-    await $('#username').setValue('tomsmith')
-    await $('#password').setValue('SuperSecretPassword!')
-    await $('button[type="submit"]').click()
+describe('Application login', () => {
+  beforeEach(async () => {
+    await browser.url('/')
+  })
 
-    await expect($('#flash')).toBeExisting()
-    await expect($('#flash')).toHaveTextContaining(
-      'You logged into a secure area!')
+  it('signs in with valid credentials', async () => {
+    await LoginPage.fillSubmitForm('generic@email.com', 'generic')
+
+    await expect(browser).toHaveUrlContaining('home')
+    await expect($('h1')).toHaveTextContaining('Serverest Store')
+  })
+
+  it('shows error message with wrong password', async () => {
+    await LoginPage.fillSubmitForm('generic@email.com', 'wrong')
+
+    await expect($('.alert')).toHaveTextContaining('Email e/ou senha inválidos')
   })
 })
-
